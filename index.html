@@ -2,166 +2,85 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Collection Propre</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection Carddass Pocket Monster</title>
     <style>
-        body { background: #1a1a1a; display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 20px; }
-        img { max-width: 90%; height: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: 10px; }
+        /* Style général */
+        body {
+            background-color: #1a1a1a; 
+            margin: 0;
+            padding: 40px;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: 300;
+            margin-bottom: 50px;
+            letter-spacing: 3px;
+            color: #f0f0f0;
+            text-transform: uppercase;
+        }
+
+        /* La Grille de 6 images par ligne */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); 
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Style des images */
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            cursor: pointer;
+            display: block;
+            background-color: #2a2a2a; /* Fond en attendant le chargement */
+        }
+
+        /* Effet au survol */
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.9);
+            z-index: 10;
+        }
+
+        /* Tablettes (3 colonnes) */
+        @media (max-width: 1100px) {
+            .gallery { grid-template-columns: repeat(3, 1fr); }
+            body { padding: 20px; }
+        }
+
+        /* Mobiles (2 colonnes) */
+        @media (max-width: 600px) {
+            .gallery { 
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 12px;
+            }
+            h1 { font-size: 1.2rem; margin-bottom: 30px; }
+        }
     </style>
 </head>
 <body>
-<img alt="Calvelon" class="custom-logo" decoding="async" height="29" sizes="(max-width: 29px) 100vw, 29px" src="images/carte_001.png" width="29"/>
-<img alt="Catégorie Carddass 100 Pocket Monster (partie 3 et 4)" class="category-thumbnail" src="images/carte_002.webp"/>
-<img alt="Bulbizarre No. 001 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" fetchpriority="high" height="436" sizes="(max-width: 300px) 100vw, 300px" src="images/carte_003.jpg" width="300"/>
-<img alt="Herbizarre No. 002 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" sizes="(max-width: 300px) 100vw, 300px" src="images/carte_004.jpg" width="300"/>
-<img alt="Florizarre (Prism Holo) No. 003 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="432" sizes="(max-width: 300px) 100vw, 300px" src="images/carte_005.jpg" width="300"/>
-<img alt="Salamèche No. 004 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_006.jpg" width="300"/>
-<img alt="Reptincel No. 005 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="439" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_007.jpg" width="300"/>
-<img alt="Promo Voggt" loading="lazy" src="images/carte_008.jpg"/>
-<img alt="Dracaufeu (Prism Holo) No. 006 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_009.jpg" width="300"/>
-<img alt="Dos de carte de Dracaufeu (Prism Holo) No. 006 – Carddass Part 3" class="show-on-hover" decoding="async" height="410" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_010.webp" width="300"/>
-<img alt="Carapuce No. 007 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_011.jpg" width="300"/>
-<img alt="Carabaffe No. 008 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_012.jpg" width="300"/>
-<img alt="Tortank (Prism Holo) No. 009 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_013.jpg" width="300"/>
-<img alt="Chenipan No. 010 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_014.jpg" width="300"/>
-<img alt="Chrysacier No. 011 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_015.jpg" width="300"/>
-<img alt="Papilusion No. 012 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="435" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_016.jpg" width="300"/>
-<img alt="Aspicot No. 013 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="435" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_017.jpg" width="300"/>
-<img alt="Coconfort No. 014 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_018.jpg" width="300"/>
-<img alt="Dardargnan No. 015 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_019.jpg" width="300"/>
-<img alt="Roucool No. 016 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="435" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_020.jpg" width="300"/>
-<img alt="Roucoups No. 017 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_021.jpg" width="300"/>
-<img alt="Roucarnage No. 018 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_022.jpg" width="300"/>
-<img alt="Rattata No. 019 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_023.jpg" width="300"/>
-<img alt="Rattatac No. 020 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_024.jpg" width="300"/>
-<img alt="Piafabec No. 021 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_025.jpg" width="300"/>
-<img alt="Rapasdepic No. 022 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="435" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_026.jpg" width="300"/>
-<img alt="Abo No. 023 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="439" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_027.jpg" width="300"/>
-<img alt="Arbok No. 024 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_028.jpg" width="300"/>
-<img alt="Pikachu (Prism Holo) No. 025 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="433" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_029.jpg" width="300"/>
-<img alt="Raichu No. 026 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_030.jpg" width="300"/>
-<img alt="Sabelette No. 027 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_031.jpg" width="300"/>
-<img alt="Sablaireau No. 028 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_032.jpg" width="300"/>
-<img alt="Nidoran♀ No. 029 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_033.jpg" width="300"/>
-<img alt="Nidorina No. 030 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_034.jpg" width="300"/>
-<img alt="Nidoqueen No. 031 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_035.jpg" width="300"/>
-<img alt="Nidoran♂ No. 032 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_036.jpg" width="300"/>
-<img alt="Nidorino No. 033 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_037.jpg" width="300"/>
-<img alt="Nidoking No. 034 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_038.jpg" width="300"/>
-<img alt="Mélofée (Prism Holo) No. 035 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="434" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_039.jpg" width="300"/>
-<img alt="Mélodelfe No. 036 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="439" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_040.jpg" width="300"/>
-<img alt="Goupix No. 037 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="441" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_041.jpg" width="300"/>
-<img alt="Feunard No. 038 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_042.jpg" width="300"/>
-<img alt="Rondoudou No. 039 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="441" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_043.jpg" width="300"/>
-<img alt="Grodoudou No. 040 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_044.jpg" width="300"/>
-<img alt="Nosferapti No. 041 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_045.jpg" width="300"/>
-<img alt="Nosferalto No. 042 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_046.jpg" width="300"/>
-<img alt="Mystherbe No. 043 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="439" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_047.jpg" width="300"/>
-<img alt="Ortide No. 044 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_048.jpg" width="300"/>
-<img alt="Rafflesia No. 045 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_049.jpg" width="300"/>
-<img alt="Paras No. 046 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_050.jpg" width="300"/>
-<img alt="Parasect No. 047 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="439" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_051.jpg" width="300"/>
-<img alt="Mimitoss No. 048 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_052.jpg" width="300"/>
-<img alt="Aéromite No. 049 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_053.jpg" width="300"/>
-<img alt="Taupiqueur No. 050 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_054.jpg" width="300"/>
-<img alt="Triopikeur No. 051 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_055.jpg" width="300"/>
-<img alt="Miaouss No. 052 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_056.jpg" width="300"/>
-<img alt="Persian No. 053 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_057.jpg" width="300"/>
-<img alt="Psykokwak No. 054 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="443" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_058.jpg" width="300"/>
-<img alt="Akwakwak No. 055 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="442" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_059.jpg" width="300"/>
-<img alt="Férosinge No. 056 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="443" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_060.jpg" width="300"/>
-<img alt="Colossinge No. 057 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_061.jpg" width="300"/>
-<img alt="Caninos No. 058 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_062.jpg" width="300"/>
-<img alt="Arcanin No. 059 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="435" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_063.jpg" width="300"/>
-<img alt="Ptitard No. 060 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_064.jpg" width="300"/>
-<img alt="Têtarte No. 061 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="435" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_065.jpg" width="300"/>
-<img alt="Tartard No. 062 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_066.jpg" width="300"/>
-<img alt="Abra No. 063 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_067.jpg" width="300"/>
-<img alt="Kadabra No. 064 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_068.jpg" width="300"/>
-<img alt="Alakazam No. 065 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_069.jpg" width="300"/>
-<img alt="Machoc No. 066 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_070.jpg" width="300"/>
-<img alt="Machopeur No. 067 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_071.jpg" width="300"/>
-<img alt="Mackogneur No. 068 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="442" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_072.jpg" width="300"/>
-<img alt="Chétiflor No. 069 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_073.jpg" width="300"/>
-<img alt="Boustiflor No. 070 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_074.jpg" width="300"/>
-<img alt="Empiflor No. 071 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_075.jpg" width="300"/>
-<img alt="Tentacool No. 072 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_076.jpg" width="300"/>
-<img alt="Tentacruel No. 073 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_077.jpg" width="300"/>
-<img alt="Racaillou No. 074 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_078.jpg" width="300"/>
-<img alt="Gravalanch No. 075 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_079.jpg" width="300"/>
-<img alt="Grolem No. 076 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="434" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_080.jpg" width="300"/>
-<img alt="Ponyta No. 077 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_081.jpg" width="300"/>
-<img alt="Galopa No. 078 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_082.jpg" width="300"/>
-<img alt="Ramoloss No. 079 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_083.jpg" width="300"/>
-<img alt="Flagadoss No. 080 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_084.jpg" width="300"/>
-<img alt="Magnéti No. 081 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_085.jpg" width="300"/>
-<img alt="Magnéton No. 082 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_086.jpg" width="300"/>
-<img alt="Canarticho No. 083 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_087.jpg" width="300"/>
-<img alt="Doduo No. 084 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_088.jpg" width="300"/>
-<img alt="Dodrio No. 085 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="435" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_089.jpg" width="300"/>
-<img alt="Otaria No. 086 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_090.jpg" width="300"/>
-<img alt="Lamantine No. 087 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_091.jpg" width="300"/>
-<img alt="Tadmorv No. 088 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_092.jpg" width="300"/>
-<img alt="Grotadmorv No. 089 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_093.jpg" width="300"/>
-<img alt="Kokiyas No. 090 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_094.jpg" width="300"/>
-<img alt="Crustabri No. 091 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_095.jpg" width="300"/>
-<img alt="Fantominus No. 092 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_096.jpg" width="300"/>
-<img alt="Spectrum No. 093 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="435" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_097.jpg" width="300"/>
-<img alt="Ectoplasma No. 094 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="435" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_098.jpg" width="300"/>
-<img alt="Onix No. 095 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_099.jpg" width="300"/>
-<img alt="Soporifik No. 096 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_100.jpg" width="300"/>
-<img alt="Hypnomade No. 097 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_101.jpg" width="300"/>
-<img alt="Krabby No. 098 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_102.jpg" width="300"/>
-<img alt="Krabboss No. 099 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="435" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_103.jpg" width="300"/>
-<img alt="Voltorbe No. 100 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_104.jpg" width="300"/>
-<img alt="Électrode No. 101 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_105.jpg" width="300"/>
-<img alt="Noeunoeuf No. 102 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_106.jpg" width="300"/>
-<img alt="Noadkoko No. 103 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="435" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_107.jpg" width="300"/>
-<img alt="Osselait No. 104 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_108.jpg" width="300"/>
-<img alt="Ossatueur No. 105 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_109.jpg" width="300"/>
-<img alt="Kicklee No. 106 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_110.jpg" width="300"/>
-<img alt="Tygnon No. 107 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_111.jpg" width="300"/>
-<img alt="Excelangue No. 108 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="442" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_112.jpg" width="300"/>
-<img alt="Smogo No. 109 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_113.jpg" width="300"/>
-<img alt="Smogogo No. 110 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_114.jpg" width="300"/>
-<img alt="Rhinocorne No. 111 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_115.jpg" width="300"/>
-<img alt="Rhinoféros No. 112 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_116.jpg" width="300"/>
-<img alt="Leveinard No. 113 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_117.jpg" width="300"/>
-<img alt="Saquedeneu No. 114 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="444" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_118.jpg" width="300"/>
-<img alt="Kangourex No. 115 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_119.jpg" width="300"/>
-<img alt="Hypotrempe No. 116 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_120.jpg" width="300"/>
-<img alt="Hypocéan No. 117 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="435" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_121.jpg" width="300"/>
-<img alt="Poissirène No. 118 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_122.jpg" width="300"/>
-<img alt="Poissoroy No. 119 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_123.jpg" width="300"/>
-<img alt="Stari No. 120 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_124.jpg" width="300"/>
-<img alt="Staross No. 121 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_125.jpg" width="300"/>
-<img alt="M. Mime No. 122 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_126.jpg" width="300"/>
-<img alt="Insécateur (Prism Holo) No. 123 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="435" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_127.jpg" width="300"/>
-<img alt="Lippoutou No. 124 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_128.jpg" width="300"/>
-<img alt="Élektek No. 125 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_129.jpg" width="300"/>
-<img alt="Magmar No. 126 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_130.jpg" width="300"/>
-<img alt="Scarabrute No. 127 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_131.jpg" width="300"/>
-<img alt="Tauros No. 128 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="440" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_132.jpg" width="300"/>
-<img alt="Magicarpe No. 129 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_133.jpg" width="300"/>
-<img alt="Léviator (Prism Holo) No. 130 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="435" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_134.jpg" width="300"/>
-<img alt="Lokhlass No. 131 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_135.jpg" width="300"/>
-<img alt="Métamorph No. 132 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_136.jpg" width="300"/>
-<img alt="Évoli (Prism Holo) No. 133 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="433" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_137.jpg" width="300"/>
-<img alt="Aquali No. 134 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_138.jpg" width="300"/>
-<img alt="Voltali No. 135 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_139.jpg" width="300"/>
-<img alt="Pyroli No. 136 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_140.jpg" width="300"/>
-<img alt="Porygon No. 137 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_141.jpg" width="300"/>
-<img alt="Amonita No. 138 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_142.jpg" width="300"/>
-<img alt="Amonistar (Prism Holo) No. 139 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="440" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_143.jpg" width="300"/>
-<img alt="Kabuto No. 140 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="435" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_144.jpg" width="300"/>
-<img alt="Kabutops (Prism Holo) No. 141 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="439" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_145.jpg" width="300"/>
-<img alt="Ptéra (Prism Holo) No. 142 - Carddass Part 3" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_146.jpg" width="300"/>
-<img alt="Ronflex No. 143 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="438" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_147.jpg" width="300"/>
-<img alt="Artikodin (Prism Holo) No. 144 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="432" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_148.jpg" width="300"/>
-<img alt="Électhor (Prism Holo) No. 145 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="435" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_149.jpg" width="300"/>
-<img alt="Sulfura (Prism Holo) No. 146 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="440" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_150.jpg" width="300"/>
-<img alt="Minidraco No. 147 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="436" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_151.jpg" width="300"/>
-<img alt="Draco No. 148 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="437" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_152.jpg" width="300"/>
-<img alt="Dracolosse (Prism Holo) No. 149 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="434" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_153.jpg" width="300"/>
-<img alt="Mewtwo (Prism Holo) No. 150 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="439" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_154.jpg" width="300"/>
-<img alt="Mew (Foil) No. 151 - Carddass Part 4" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" decoding="async" height="434" loading="lazy" sizes="auto, (max-width: 300px) 100vw, 300px" src="images/carte_155.jpg" width="300"/>
-</body>\</html>
+
+    <h1>Carddass Pocket Monster - Part 3 & 4</h1>
+
+    <div class="gallery">
+        <img src="images/carte_001.jpg" alt="Carte 001">
+        <img src="images/carte_002.jpg" alt="Carte 002">
+        <img src="images/carte_003.jpg" alt="Carte 003">
+        <img src="images/carte_004.jpg" alt="Carte 004">
+        <img src="images/carte_005.jpg" alt="Carte 005">
+        <img src="images/carte_006.jpg" alt="Carte 006">
+        <img src="images/carte_007.jpg" alt="Carte 007">
+        <img src="images/carte_008.jpg" alt="Carte 008">
+        <img src="images/carte_009.jpg" alt="Carte 009">
+        <img src="images/carte_010.jpg" alt="Carte 010">
+        <img src="images/carte_011.jpg" alt="Carte 011">
+        <img src="images/
